@@ -27,6 +27,15 @@ window.title("MOVIE FINDER API")         # sets the title of the window
 window.geometry("1020x555")         # sets the size/geometry of the app window
 window.resizable(0, 0)             # restricts resizing of the app window
 
+# adding a background image for the application
+bg_img = Image.open(os.path.join(filepath, "app-bg.png"))
+bg_img_display = ImageTk.PhotoImage(bg_img)
+img_label = tk.Label(window, image = bg_img_display)
+img_label.place(relheight = 1, relwidth = 1)
+
+# creating a heading for the application
+main_heading = tk.Label(window, font = ('Tahoma', 50, 'bold'), text = "SPORTS API", fg = '#ffffff', bg = '#000000')
+main_heading.pack(side = TOP, pady = 30)
 
 ####################################### API BACKEND SETUP #################################################
 
