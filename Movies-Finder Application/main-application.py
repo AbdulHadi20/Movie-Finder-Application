@@ -84,14 +84,17 @@ def search_tvseries():
 
     # conditional to check if we get results
     if 'results' in data and isinstance(data['results'], list):
-        show = data['results']
+        for show in data['results']:
+            show_name = show.get('name', 'Name not available')
+            
 
-        show_name = data['results',[1,['name']]] # having difficulties in displaying output in gui
+            print(show_name)
 
-        print(show)
-        print(show_name)
-    else:
-        print("Results list is empty or not present in the data.")
+            # result_name = tk.Label(tv_series_search, textvariable = show_name_str)
+            # result_name.grid(row = 2, column = 1)
+        
+        else:
+            print("Results list is empty or not present in the data.")
 
 search_tvseries()
 
