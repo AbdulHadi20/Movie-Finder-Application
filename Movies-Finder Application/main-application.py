@@ -25,7 +25,7 @@ window = tk.Tk()
 # setting up the dimensions, size, resizing etc. 
 window.title("MOVIE FINDER API")         # sets the title of the window 
 window.geometry("1440x735")         # sets the size/geometry of the app window
-window.resizable(0, 0)             # restricts resizing of the app window
+window.resizable(1, 1)             # allows resizing of the app window
 
 # adding a background image for the application
 bg_img = Image.open(os.path.join(filepath, "appbg.jpg"))
@@ -41,9 +41,9 @@ main_heading.pack(side = TOP, pady = 30)
 notebook = ttk.Notebook(window)
 
 # creating frames for each tab
-main_menu = tk.Frame(notebook, width = 1440, height = 700)
-tv_series_search = tk.Frame(notebook, width = 1440, height = 700)
-movie_search = tk.Frame(notebook, width = 1440, height = 700)
+main_menu = tk.Frame(notebook, width = 1440, height = 750)
+tv_series_search = tk.Frame(notebook, width = 1440, height = 750)
+movie_search = tk.Frame(notebook, width = 1440, height = 750)
 
 # adding the frames to the notebook tabs
 notebook.add(tv_series_search, text = "TV Series Search")
